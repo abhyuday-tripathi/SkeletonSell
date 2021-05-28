@@ -4,5 +4,5 @@
 </p></a>
 
 <p align="center">
-  <strong>You can sell anything here. Anything but Skeletons</strong>
+  <strong>You can sell anything here. Anything but Skeletons.</strong>
 </p>

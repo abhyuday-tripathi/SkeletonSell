@@ -9,12 +9,12 @@ import Image from 'next/image';
 import { v4 as uuidV4 } from 'uuid';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyDUMo1lmqzXS1bxziuQ1zz8MBXFTTlbz-Q',
-  authDomain: 'donewithit-2010.firebaseapp.com',
-  projectId: 'donewithit-2010',
-  storageBucket: 'donewithit-2010.appspot.com',
-  messagingSenderId: '55471131336',
-  appId: '1:55471131336:web:2c696235bd4d421865b3fd',
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
 if (!firebase.apps.length) {

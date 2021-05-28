@@ -33,3 +33,7 @@
 We will love to see your response!
 
 You can contribute by pointing out typos in the README, opening issues for bug and anything else!
+
+## Code of Conduct
+
+Please read [CODE_OF_CONDUCT.md](https://github.com/abhyuday-tripathi/SkeletonSell/blob/staging/CODE_OF_CONDUCT.md) for details on our code of conduct.

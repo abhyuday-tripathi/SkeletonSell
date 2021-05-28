@@ -89,12 +89,12 @@
   margin-bottom: 2em;
   margin-top: 2em;
   text-align: center;
-  font-weight: 900;
+  font-weight: 500;
   user-select: none;
 }
 
 .redItalic {
-  font-family: 'Lora', 'Montserrat';
+  font-family: 'Sofia Pro', 'Montserrat';
   user-select: none;
   color: #ff6b6b;
 }

@@ -6,7 +6,6 @@ import 'firebase/firestore';
 import 'firebase/auth';
 import Image from 'next/image';
 import Link from 'next/link';
-import { v4 as uuidV4 } from 'uuid';
 let id;
 
 const firebaseConfig = {
@@ -87,7 +86,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>SkeletonSell. - Sell items that you are done with it.</title>
+        <title>SkeletonSell. - Sell anything. Anything buy Skeletons.</title>
         <meta
           name='description'
           content='Have some stuff that you don&#x27;t need? Sell it on SkeletonSell!'
@@ -95,7 +94,7 @@ export default function Home() {
       </Head>
       {!user && (
         <div className={styles.loggedOut}>
-          <h1 className={styles.redItalic}>SkeletonSell.</h1>
+          <Image src='/logoskeletonsell.svg' width='528' height='100' />
           <h1 className={styles.title}>
             Sign in / Sign Up to{' '}
             <span className={styles.redItalic}>continue</span>.

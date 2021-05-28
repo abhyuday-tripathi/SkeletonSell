@@ -1,6 +1,6 @@
 <a href="https://github.com/abhyuday-tripathi/SkeletonSell">
   <p align="center">
-    <img height=100 src="logo.svg"/>
+    <img height=100 src="logoskeletonsell.svg"/>
   </p>
 </a>
 

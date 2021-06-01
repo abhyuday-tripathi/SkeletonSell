@@ -80,7 +80,7 @@ const Item = () => {
             </div>
             <div className={styles.contentContainer}>
               <h1 className={styles.subTitle}>Product Info</h1>
-              <p>{data.itemDescription}</p>
+              <p className={styles.infoText}>{data.itemDescription}</p>
               <div className={styles.contactInfo}>
                 <p className={styles.infoText}>Address: {data.userAddress}</p>
                 <p className={styles.infoText}>

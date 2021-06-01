@@ -187,7 +187,6 @@
     opacity, box-shadow, transform, filter, backdrop-filter,
     -webkit-backdrop-filter;
   width: 100%;
-  padding: 20px;
   border-radius: 0.5rem;
   cursor: pointer;
   display: flex;

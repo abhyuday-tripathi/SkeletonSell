@@ -302,8 +302,12 @@ export default function Home() {
               </svg>
             </div>
             <div className={styles.footerLinks}>
-              <a href='/'>Privacy Policy</a>
-              <a href='/'>Report a bug</a>
+              <a href='https://www.freeprivacypolicy.com/live/78641bb5-5cc3-40d2-82ba-46a6c21a3ffc'>
+                Privacy Policy
+              </a>
+              <a href='https://github.com/abhyuday-tripathi/SkeletonSell/issues'>
+                Report a bug
+              </a>
             </div>
           </div>
         </div>
@@ -485,13 +489,27 @@ export default function Home() {
               <a title='Sell a New Product'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
-                  className='h-5 w-5'
                   viewBox='0 0 20 20'
                   fill='#fd4d4d'
                 >
                   <path
                     fillRule='evenodd'
                     d='M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z'
+                    clipRule='evenodd'
+                  />
+                </svg>
+              </a>
+            </Link>
+            <Link href='https://github.com/abhyuday-tripathi/SkeletonSell/issues'>
+              <a title='Report an Issue'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  viewBox='0 0 20 20'
+                  fill='#fd4d4d'
+                >
+                  <path
+                    fillRule='evenodd'
+                    d='M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z'
                     clipRule='evenodd'
                   />
                 </svg>

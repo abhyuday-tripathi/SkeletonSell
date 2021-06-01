@@ -1,14 +1,22 @@
 @font-face {
+  font-family: Sofia Pro Bold;
+  src: url('/fonts/Sofia\ Pro\ Bold.otf');
+  font-weight: 7000;
+  font-display: swap;
+}
+
+@font-face {
   font-family: Sofia Pro Medium;
   src: url('/fonts/Sofia\ Pro\ Medium.otf');
   font-weight: 500;
-  font-display: swap;
   font-display: swap;
 }
 
 @font-face {
   font-family: Sofia Pro;
   src: url('/fonts/Sofia\ Pro\ Regular.otf');
+  font-weight: 400;
+  font-display: swap;
 }
 
 * {
@@ -17,19 +25,19 @@
   box-sizing: border-box;
   color: #13293d;
   font-family: Sofia Pro, sans-serif;
+  scrollbar-width: thin;
+  scrollbar-color: #242c37 transparent;
 }
 
-::selection {
-  background: #eee;
-  color: #111;
+body {
+  background: #0b0e11;
 }
 
 .btn {
-  padding: 0.7em 2em;
   cursor: pointer;
   margin-left: 2em;
-  background: #111;
-  border: 1px solid #111;
+  background: #fd4d4d;
+  border: 1px solid #fd4d4d;
   border-radius: 7px;
   color: #fff;
   display: flex;
@@ -37,10 +45,21 @@
   justify-content: center;
   overflow: hidden;
   user-select: none;
+  transition-property: background-color, border-color, color, fill, stroke,
+    opacity, box-shadow, transform, filter, backdrop-filter,
+    -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 0.875rem;
+  font-weight: 700;
 }
 
 .btn:hover {
-  background: #222;
+  background: #fd6868;
 }
 
 .btn div {

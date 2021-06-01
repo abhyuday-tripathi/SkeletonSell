@@ -18,16 +18,14 @@
   </a>
 </p>
 
-## Tech Stack
-
 ---
+
+## Tech Stack
 
 | FrameWork / Service |         Description         |
 | :------------------ | :-------------------------: |
 | React / Next.js     |          Front End          |
 | Firebase            | Database (Firestore) & Auth |
-
-<br />
 
 ## Contribute
 

@@ -4,9 +4,8 @@ import { useState, useEffect } from 'react';
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/storage';
+import 'firebase/auth';
 import styles from '../../styles/CreateItem.module.css';
-import Image from 'next/image';
-import { v4 as uuidV4 } from 'uuid';
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -30,28 +29,60 @@ const CreateItem = () => {
   const [userAddress, setUserAddress] = useState();
   const [itemPriceMrp, setItemPriceMrp] = useState();
   const [itemSmallDescription, setItemSmallDescription] = useState();
+  const [itemDescription, setItemDescription] = useState();
+  const [userFullName, setUserFullName] = useState();
+  const [user, setUser] = useState(null);
   const router = useRouter();
   const storage = firebase.storage();
 
   useEffect(() => {
-    window.localStorage.setItem('id', uuidV4());
+    firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        setUser(user);
+      } else {
+        setUser(null);
+        document.body.innerHTML = '<h1>Please login to sell a Item</h1>';
+        document.body.style =
+          'display: flex; align-items: center; justify-content: center; height: 100vh;';
+        document.querySelector('h1').style =
+          'color: #dee3ea !important; font-size: 1rem;';
+      }
+    });
   }, []);
+
+  let uuid;
+
+  if (user !== null) {
+    uuid = user.uid;
+  }
+
+  const data = {
+    uid: uuid,
+    imageUrl,
+    userAddress,
+    userPhoneNumber,
+    itemName,
+    itemPrice,
+    itemPriceMrp,
+    itemSmallDescription,
+    itemDescription,
+    userFullName,
+  };
 
   const handleSubmit = e => {
     e.preventDefault();
+
     firebase
       .firestore()
-      .collection(localStorage.getItem('id'))
-      .add({
-        id: localStorage.getItem('id'),
-        imageUrl,
-        userAddress,
-        userPhoneNumber,
-        itemName,
-        itemPrice,
-        itemSmallDescription,
+      .collection('root')
+      .add(data)
+      .then(data => {
+        console.log(data);
+        router.push('/');
+      })
+      .catch(err => {
+        console.error(err);
       });
-    router.push('/');
   };
 
   const handleChange = e => {
@@ -113,7 +144,7 @@ const CreateItem = () => {
             onChange={handleChange}
             style={{ display: 'none' }}
           />
-          <button className={styles.btn} onClick={handleUploadImage}>
+          <button className={styles.btnRed} onClick={handleUploadImage}>
             Upload (Image)
           </button>
         </div>
@@ -131,7 +162,7 @@ const CreateItem = () => {
             type='number'
             value={itemPrice}
             onChange={e => setItemPrice(e.target.value)}
-            placeholder={'Item Price That you want to sell.'}
+            placeholder={'Item Price That you want to sell'}
             required
           />
           <input
@@ -153,7 +184,7 @@ const CreateItem = () => {
           <input
             className={styles.formInput}
             type='number'
-            placeholder={'The Price of the item when you bought it.'}
+            placeholder={'The Price of the item when you bought it'}
             value={itemPriceMrp}
             onChange={e => setItemPriceMrp(e.target.value)}
             required
@@ -161,15 +192,39 @@ const CreateItem = () => {
           <input
             className={styles.formInput}
             type='text'
-            placeholder={'Small Description of only 5 words.'}
+            placeholder={'A Small Description'}
             value={itemSmallDescription}
             onChange={e => setItemSmallDescription(e.target.value)}
             required
           />
-          <button onClick={handleSubmit} className={styles.btn} type='submit'>
+          <input
+            className={styles.formInput}
+            type='text'
+            placeholder={'Full Description of your Product'}
+            value={itemDescription}
+            onChange={e => setItemDescription(e.target.value)}
+            required
+          />
+          <input
+            className={styles.formInput}
+            type='text'
+            placeholder={'Your Full Name'}
+            value={userFullName}
+            onChange={e => setUserFullName(e.target.value)}
+            required
+          />
+          <button
+            onClick={handleSubmit}
+            className={styles.btnRedTopMargin}
+            type='submit'
+          >
             Sell It!
           </button>
         </div>
+        <p className={styles.infoText}>
+          Note - If you don't get redirected to the home page, try re-clicking
+          the 'Sell It!' button
+        </p>
       </form>
     </div>
   );

@@ -1,4 +1,4 @@
-# Contributor Covenant Code of Conduct
+# Code of Conduct
 
 All participants of SkeletonSell are expected to abide by our Code of Conduct, both online and during in-person events that are hosted and/or associated with SkeletonSell.
 
@@ -36,7 +36,3 @@ Examples of unacceptable behavior by participants include:
 Violations of the Code of Conduct may be reported by sending an email to <a href='mailto:abhyuday.tripathi@yahoo.com'>abhyuday.tripathi@yahoo.com</a>. All reports will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. Further details of specific enforcement policies may be posted separately.
 
 We hold the right and responsibility to remove comments or other contributions that are not aligned to this Code of Conduct, or to ban temporarily or permanently any members for other behaviors that they deem inappropriate, threatening, offensive, or harmful.
-
-## Attribution
-
-This Code of Conduct is adapted from dev.to.

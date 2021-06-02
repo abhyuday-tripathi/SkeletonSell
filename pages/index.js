@@ -486,16 +486,55 @@ export default function Home() {
           {!data && ''}
           <div className={styles.bottomNav}>
             <Link href='/p/createItem'>
-              <a title='Sell a New Product'>
+              <a className={styles.icon} title='Sell a New Product'>
                 <svg
+                  className='w-6 h-6'
+                  fill='none'
+                  stroke='#fd4d4d'
+                  viewBox='0 0 24 24'
                   xmlns='http://www.w3.org/2000/svg'
-                  viewBox='0 0 20 20'
-                  fill='#fd4d4d'
                 >
                   <path
-                    fillRule='evenodd'
-                    d='M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z'
-                    clipRule='evenodd'
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth={1}
+                    d='M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z'
+                  />
+                </svg>
+              </a>
+            </Link>
+            <Link href='https://paypal.me/AbhyudayTripathi'>
+              <a className={styles.icon} title='Show Support for Us'>
+                <svg
+                  className='w-6 h-6'
+                  fill='none'
+                  stroke='#fd4d4d'
+                  viewBox='0 0 24 24'
+                  xmlns='http://www.w3.org/2000/svg'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth={1}
+                    d='M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
+                  />
+                </svg>
+              </a>
+            </Link>
+            <Link href='https://github.com/abhyuday-tripathi/SkeletonSell/issues'>
+              <a className={styles.icon} title='Report a Bug'>
+                <svg
+                  className='w-6 h-6'
+                  fill='none'
+                  stroke='#fd4d4d'
+                  viewBox='0 0 24 24'
+                  xmlns='http://www.w3.org/2000/svg'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth={1}
+                    d='M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636'
                   />
                 </svg>
               </a>

@@ -84,6 +84,7 @@ export default function Home() {
     <div>
       <Head>
         <title>SkeletonSell. - Sell anything. Anything buy Skeletons.</title>
+        <link rel='favicon' href='/favicon.ico' />
         <meta
           name='description'
           content='Have some stuff that you don&#x27;t need? Sell it on SkeletonSell!'
